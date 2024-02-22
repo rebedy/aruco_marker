@@ -1,7 +1,8 @@
 import numpy as np
 import cv2
 
-ARUCO_DICT = {
+ID = 1
+ARUCO_TYPE_DICT = {
     "DICT_4X4_50": cv2.aruco.DICT_4X4_50,
     "DICT_4X4_100": cv2.aruco.DICT_4X4_100,
     "DICT_4X4_250": cv2.aruco.DICT_4X4_250,
@@ -26,12 +27,9 @@ ARUCO_DICT = {
 }
 
 aruco_type = "DICT_6X6_250"
+print("ArUCo type '{}'".format(aruco_type))
 
-ID = 1
-
-arucoDict = cv2.aruco.Dictionary_get(ARUCO_DICT[aruco_type])
-print("ArUCo type '{}' with ID '{}'".format(aruco_type, ID))
-
+arucoDict = cv2.aruco.Dictionary_get(ARUCO_TYPE_DICT[aruco_type])
 
 tag_size_list = [100, 150, 200, 250, 300, 350,
                  400, 450, 500, 550, 600, 650, 700]

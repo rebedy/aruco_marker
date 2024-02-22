@@ -20,7 +20,7 @@ def pose_estimation(frame, aruco_type, length, camx, dist, name, marker_data_lis
     aruco_dict = cv2.aruco.getPredefinedDictionary(aruco_type)
     parameters = cv2.aruco.DetectorParameters_create()
 
-    corners, ids, rejected_img_points = cv2.aruco.detectMarkers(
+    corners, ids, _ = cv2.aruco.detectMarkers(
         gray, aruco_dict, parameters=parameters,
         cameraMatrix=camx, distCoeff=dist)
 
