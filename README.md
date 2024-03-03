@@ -2,6 +2,8 @@
 
 This application utilizes OpenCV to generate and detect ArUco markers of various sizes, and to estimate their 3D angles relative to the camera.
 
+![Vizualization](https://github.com/rebedy/aruco_marker/blob/main/recorded/350_result.gif?raw=true)
+
 
 
 ## Overview
